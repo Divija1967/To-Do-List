@@ -1,0 +1,17 @@
+{
+    "name": "To-Do List",
+    "description": "To-Do list extension to sort out your life",
+    "version": "0.1.0",
+    "manifest_version" : 1,
+    "action":{
+        "default_popup": "ToDoPopup.html"
+    },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "css": ["main.css"]
+      }
+    ],
+    "chrome_url_overrides":{
+        "newtab": "To-Do.html"
+    }
+}
