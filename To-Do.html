@@ -9,16 +9,22 @@
       href="https://fonts.googleapis.com/css?family=Cookie:400,400,700,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu:400,400,700,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="main.css"/>
     <script defer src="ToDo.js"></script>
 </head>
 <body>
-    <h1 class='title'>to - do</h1>
+    <h1 class='title'>Divija's to-do list</h1>
 
  <!-- div for lists according to the day of the week -->
  <div class="days">
     <h2 class="dayListTitle">Day</h2>
-    <ul class="dayList" data-lists></ul>
+    <ul class="dayList" data-lists>
+        <li class="dayName"></li>
+    </ul>
 
     <form action="" data-new-list-form>
         <input 
@@ -41,44 +47,8 @@
         </div>
 
         <div class="todoBody">
-            <div class="tasks" data-tasks>
-                <!-- <div class="task">
-                    <input 
-                        type="checkbox"
-                        id="task-1"
-                    />
-                    <label for="task-1"> 
-                        <span class="customCheckbox"></span>
-                        do this 1
-                    </label>
-                </div> -->
-                <!-- task 1 -->
-                
-                <!-- <div class="task">
-                    <input 
-                        type="checkbox"
-                        id="task-2"
-                    />
-                    <label for="task-2"> 
-                        <span class="customCheckbox"></span>
-                        do this 2
-                    </label>
-                </div> -->
-                
-                <!-- task 2 --> 
-                
-                <!-- <div class="task">
-                    <input 
-                    type="checkbox"
-                    id="task-3"
-                />
-                <label for="task-3"> 
-                    <span class="customCheckbox"></span>
-                    do this 3
-                </label> -->
-            </div>
-            <!-- task 3 -->
-        
+            <div class="tasks" data-tasks></div>
+
             <div class="newTaskCreator">
                 <form action="" data-new-task-form>
                     <input 
@@ -94,8 +64,9 @@
 
             </div>
             <div class="deleteStuff">
-                <button class="btnDelete" data-clear-complete-tasks-button>clear completed</button>
-                <button class="btnDelete" data-delete-list-button>clear list</button>
+                <button class="btnDelete" data-delete-list-button>delete list</button>
+                <button class="btnDelete completed" data-clear-complete-tasks-button>clear completed</button>
+                
             </div>
         </div>
        
@@ -105,6 +76,12 @@
               <label>
                 <span class="customCheckbox"></span>
               </label>
+            </div>
+          </template>
+
+          <template id="day-template">
+            <div class="day">
+              <li class='dayName'></li>
             </div>
           </template>
 
